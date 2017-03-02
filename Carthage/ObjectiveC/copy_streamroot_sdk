@@ -1,0 +1,64 @@
+#!/bin/sh
+
+check_arg() {
+    if [ -z "$1" ]; then
+        echo "$2 is not set"
+        exit 1
+    fi
+}
+
+# Check inputs
+check_arg "$ARCHS" ARCHS
+check_arg "$SRCROOT" SRCROOT
+check_arg "$BUILT_PRODUCTS_DIR" BUILT_PRODUCTS_DIR
+check_arg "$FRAMEWORKS_FOLDER_PATH" FRAMEWORKS_FOLDER_PATH
+check_arg "$SCRIPT_INPUT_FILE_COUNT" SCRIPT_INPUT_FILE_COUNT
+check_arg "$EXPANDED_CODE_SIGN_IDENTITY" EXPANDED_CODE_SIGN_IDENTITY
+
+if [ $SCRIPT_INPUT_FILE_COUNT -gt 0 ]; then
+    FOLDER=$SCRIPT_INPUT_FILE_0
+else
+    FOLDER="${SRCROOT}"
+fi
+
+# Copy StreamrootSDK.framework
+FRAMEWORK="StreamrootSDK.framework"
+FRAMEWORK_PATH="${FOLDER}/${FRAMEWORK}"
+
+if [ ! -d "${FRAMEWORK_PATH}" ]; then
+    echo "${FRAMEWORK_PATH} not found."
+    exit 1
+fi
+
+if [ -L "${FRAMEWORK_PATH}" ]; then
+    cd "${FRAMEWORK_PATH}"
+    FRAMEWORK_PATH=`pwd -P "${FRAMEWORK_PATH}"`
+    cd -
+fi
+
+cp -R "${FRAMEWORK_PATH}" "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+
+# Remove StreamrootSDK.framework/Modules folder
+MODULES="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/${FRAMEWORK}/Modules"
+if [ -d "$MODULES" ]; then
+    rm -r "${MODULES}"
+fi
+
+# Extract targeted architectures
+FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK/StreamrootSDK"
+EXTRACTED_ARCHS=()
+
+for ARCH in $ARCHS; do
+    lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+    EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+done
+
+# Merge extracted binaries
+lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+rm "${EXTRACTED_ARCHS[@]}"
+rm "$FRAMEWORK_EXECUTABLE_PATH"
+mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+
+# Sign StreamrootSDK.framework
+/usr/bin/codesign --force --sign "$EXPANDED_CODE_SIGN_IDENTITY" --preserve-metadata=identifier,entitlements "$FRAMEWORK_EXECUTABLE_PATH"
+
