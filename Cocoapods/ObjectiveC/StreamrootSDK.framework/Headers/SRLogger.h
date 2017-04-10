@@ -14,6 +14,7 @@
 
 @property (nonatomic) SRLoggerLevel level;
 @property (nonatomic) SRLoggerLevel httpLevel;
+@property (nonatomic) SRLoggerLevel proxyLevel;
 @property (nonatomic) SRLoggerLevel signalingLevel;
 
 + (SRLogger * _Nonnull)sharedInstance;

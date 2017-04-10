@@ -14,6 +14,8 @@
 #import "SRLoggerLevel.h"
 #import "SRLogger.h"
 #import "MurmurHash3.h"
+#import "NSString+Utils.h"
 
 #import "GCDWebServer.h"
 #import "GCDWebServerDataResponse.h"
+#import "GCDWebServerErrorResponse.h"

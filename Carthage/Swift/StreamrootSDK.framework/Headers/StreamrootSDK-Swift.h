@@ -137,8 +137,12 @@ SWIFT_CLASS("_TtC13StreamrootSDK16StreamrootFacade")
 @interface StreamrootFacade : NSObject
 @property (nonatomic, weak) id <StreamrootSDKDelegate> _Nullable delegate;
 @property (nonatomic, copy) NSString * _Nullable contentId;
+@property (nonatomic, copy) NSString * _Nullable secretKey;
 @property (nonatomic, strong) NSNumber * _Nullable latency;
 @property (nonatomic, copy) NSURL * _Nullable crowUrl;
+@property (nonatomic, copy) NSURL * _Nullable distributorUrl;
+@property (nonatomic) BOOL rangeRequestEnabled;
+@property (nonatomic) NSUInteger cacheSize;
 @property (nonatomic, strong) NSNumber * _Nonnull p2pUploadOn;
 @property (nonatomic, strong) NSNumber * _Nonnull p2pDownloadOn;
 - (nonnull instancetype)initWithStreamrootKey:(NSString * _Nonnull)streamrootKey OBJC_DESIGNATED_INITIALIZER;

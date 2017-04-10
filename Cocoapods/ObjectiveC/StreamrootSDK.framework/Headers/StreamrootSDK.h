@@ -32,7 +32,11 @@ FOUNDATION_EXPORT const unsigned char StreamrootSDKVersionString[];
 @property (nonatomic, strong, nonnull) NSNumber *latency;
 @property (nonatomic, strong, nonnull) NSNumber *p2pUploadOn;
 @property (nonatomic, strong, nonnull) NSNumber *p2pDownloadOn;
+@property (nonatomic, strong, nonnull) NSNumber *cacheSize;
 @property (nonatomic, strong, nullable) NSURL *crowUrl;
+@property (nonatomic, strong, nullable) NSURL *distributorUrl;
+@property (nonatomic, strong, nullable) NSString *secretKey;
+@property (nonatomic) BOOL rangeRequestEnabled;
 
 @property (nonatomic, weak, nullable) id<StreamrootSDKDelegate> delegate;
 
@@ -45,5 +49,6 @@ FOUNDATION_EXPORT const unsigned char StreamrootSDKVersionString[];
 + (void)setLoggerLevel:(SRLoggerLevel)level;
 + (void)setSignalingLogLevel:(SRLoggerLevel)level;
 + (void)setHTTPLogLevel:(SRLoggerLevel)level;
++ (void)setProxyLogLevel:(SRLoggerLevel)level;
 
 @end
