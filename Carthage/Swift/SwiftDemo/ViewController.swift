@@ -18,7 +18,7 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        self.streamrootSDK = StreamrootSDK(streamrootKey: <#streamrootKey#>, manifestURL: self.manifestUrl)
+        self.streamrootSDK = StreamrootSDK(streamrootKey: "dev", manifestURL: self.manifestUrl)
         self.streamrootSDK?.delegate = self
 
         do {
