@@ -134,6 +134,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import Foundation;
 @import ObjectiveC;
+@import Dispatch;
 @import CoreMedia;
 @import WebKit;
 #endif
@@ -162,11 +163,15 @@ SWIFT_CLASS("_TtC13StreamrootSDK16StreamrootFacade")
 @property (nonatomic) NSUInteger cacheSize;
 @property (nonatomic, strong) NSNumber * _Nonnull p2pUploadOn;
 @property (nonatomic, strong) NSNumber * _Nonnull p2pDownloadOn;
-- (nonnull instancetype)initWithStreamrootKey:(NSString * _Nonnull)streamrootKey OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStreamrootKey:(NSString * _Nonnull)streamrootKey queue:(dispatch_queue_t _Nullable)queue OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)start:(NSString * _Nonnull)manifestURL error:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nullable)manifestLocalURL SWIFT_WARN_UNUSED_RESULT;
 - (void)stats:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+@interface StreamrootFacade (SWIFT_EXTENSION(StreamrootSDK))
 @end
 
 

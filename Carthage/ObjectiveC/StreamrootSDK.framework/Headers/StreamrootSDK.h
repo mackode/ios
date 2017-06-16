@@ -22,6 +22,8 @@ FOUNDATION_EXPORT const unsigned char StreamrootSDKVersionString[];
 
 - (double)playbackTime;
 - (NSArray<NSValue *> * _Nonnull)loadedTimeRanges;
+// bitRate expressed in bit/s
+- (void)updatePeakBitRate:(double)bitRate;
 
 @end
 
@@ -40,7 +42,11 @@ FOUNDATION_EXPORT const unsigned char StreamrootSDKVersionString[];
 
 @property (nonatomic, weak, nullable) id<StreamrootSDKDelegate> delegate;
 
-- (instancetype _Nonnull)initWithStreamrootKey:(NSString * _Nonnull)streamrootKey manifestURL:(NSString * _Nonnull)manifestURL;
+- (instancetype _Nonnull)initWithStreamrootKey:(NSString * _Nonnull)streamrootKey
+                                   manifestURL:(NSString * _Nonnull)manifestURL;
+- (instancetype _Nonnull)initWithStreamrootKey:(NSString * _Nonnull)streamrootKey
+                                   manifestURL:(NSString * _Nonnull)manifestURL
+                                 delegateQueue:(dispatch_queue_t _Nullable)queue;
 - (BOOL)start:(NSError * _Nullable * _Nullable)error;
 - (NSString * _Nullable)manifestLocalURL;
 
