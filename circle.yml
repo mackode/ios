@@ -1,0 +1,36 @@
+machine:
+    ruby:
+        version: 2.2.0
+
+dependencies:
+    override:
+        # Configure Git credentials
+        - git config --global user.email $STREAMROOT_EMAIL
+        - git config --global user.name $STREAMROOT_USERNAME
+
+        # Get latest stable SDK version
+        - wget https://sdk.streamroot.io/ios/stable/StreamrootSDK.framework.tar.gz -O - | tar -xv
+
+        # Copy libs in all folders
+        - cp -r StreamrootSDK.framework Carthage/ObjectiveC
+        - cp -r StreamrootSDK.framework Carthage/Swift
+        - cp -r StreamrootSDK.framework Cocoapods/ObjectiveC
+        - cp -r StreamrootSDK.framework Cocoapods/Swift
+        - rm -rf StreamrootSDK.framework
+        
+test:
+    override:
+        - echo "No test specified"
+
+deployment:
+    production:
+        branch: master
+        commands:                
+            # Add new SDK library to Git
+            - git add Carthage/ObjectiveC/StreamrootSDK.framework
+            - git add Carthage/Swift/StreamrootSDK.framework
+            - git add Cocoapods/ObjectiveC/StreamrootSDK.framework
+            - git add Cocoapods/Swift/StreamrootSDK.framework
+
+            - git commit -m "[skip ci] Update SDK to v$(curl https://sdk.streamroot.io/ios/stable/manifest.yml | grep "version:" | cut -d ' ' -f 2)" || true
+            - git push origin master || true
