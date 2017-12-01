@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C4123FF181DD85CD4B47677 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7020D4C6BE3543C63D250 /* Pods_SwiftDemo.framework */; };
-		50057B721E69A10A00BB092A /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50057B711E69A10A00BB092A /* StreamrootSDK.framework */; };
 		502B1D8D1E699F44009641AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B1D8C1E699F44009641AF /* AppDelegate.swift */; };
 		502B1D8F1E699F44009641AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B1D8E1E699F44009641AF /* ViewController.swift */; };
 		502B1D921E699F44009641AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502B1D901E699F44009641AF /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4123FF181DD85CD4B47677 /* Pods_SwiftDemo.framework in Frameworks */,
-				50057B721E69A10A00BB092A /* StreamrootSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +103,6 @@
 				502B1D871E699F43009641AF /* Resources */,
 				30931294B712C1A89BE4FA4E /* [CP] Embed Pods Frameworks */,
 				C806905A65317689D2F4A183 /* [CP] Copy Pods Resources */,
-				50057B701E699FB500BB092A /* Copy StreamrootSDK */,
 			);
 			buildRules = (
 			);
@@ -128,7 +125,7 @@
 				TargetAttributes = {
 					502B1D881E699F43009641AF = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -170,28 +167,23 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${PODS_ROOT}/StreamrootDNA-iOS/StreamrootSDK.framework",
+				"${PODS_ROOT}/StreamrootDNA-iOS/StreamrootSDK.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamrootSDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/StreamrootSDK.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		50057B701E699FB500BB092A /* Copy StreamrootSDK */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy StreamrootSDK";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = $SRCROOT/copy_streamroot_sdk;
 		};
 		75F4775378EE1B979B5FD7D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -199,13 +191,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C806905A65317689D2F4A183 /* [CP] Copy Pods Resources */ = {
@@ -355,6 +350,7 @@
 			baseConfigurationReference = 8DC28733BEA12C88CAEC4C54 /* Pods-SwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -365,6 +361,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.streamroot.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -374,6 +371,7 @@
 			baseConfigurationReference = C7F5C54C49810B500CBAA749 /* Pods-SwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -384,6 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.streamroot.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

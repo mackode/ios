@@ -1,15 +1,18 @@
 PODS:
-  - Alamofire (4.2.0)
-  - Starscream (2.0.2)
+  - Alamofire (4.5.1)
+  - Starscream (3.0.2)
+  - StreamrootDNA-iOS (2.0.0):
+    - Alamofire
+    - Starscream
 
 DEPENDENCIES:
-  - Alamofire (~> 4.2.0)
-  - Starscream (~> 2.0.0)
+  - StreamrootDNA-iOS
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  Starscream: 6c135a34e0a6e60cedaa0b30db67a4c05cf7cd38
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
+  StreamrootDNA-iOS: dc8825839bc5e4bd5d945737ae222beb2c4b28c8
 
-PODFILE CHECKSUM: 434bab9639b0eddc74358767e9ac813fae061f85
+PODFILE CHECKSUM: 5f4126fe7a53fcdb22c4bc6199a620d11a06b5c1
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0.beta.2

@@ -11,7 +11,6 @@ import StreamrootSDK
 import AVKit
 
 class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
-
     internal var streamrootSDK: StreamrootSDK?
     internal let manifestUrl = "https://wowza-cloudfront.streamroot.io/liveorigin/stream4/playlist.m3u8"
 
@@ -56,5 +55,6 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
             NSValue(timeRange: TimeRange(range: value.timeRangeValue))
         }
     }
-
+    
+    func updatePeakBitRate(_ bitRate: Double) {}
 }

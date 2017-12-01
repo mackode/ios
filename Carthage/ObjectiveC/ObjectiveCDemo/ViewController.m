@@ -59,4 +59,6 @@
     return timeRanges;
 }
 
+- (void)updatePeakBitRate:(double)bitRate {}
+
 @end

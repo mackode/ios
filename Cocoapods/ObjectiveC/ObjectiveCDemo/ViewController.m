@@ -55,8 +55,12 @@
         TimeRange *timeRange = [[TimeRange alloc] initWithRange:[value CMTimeRangeValue]];
         [timeRanges addObject:[[NSValue alloc] initWithTimeRange:timeRange]];
     }
-
     return timeRanges;
 }
+
+- (void)updatePeakBitRate:(double)bitRate {
+    
+}
+
 
 @end

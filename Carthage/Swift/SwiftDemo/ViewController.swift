@@ -11,14 +11,13 @@ import StreamrootSDK
 import AVKit
 
 class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
-
     internal var streamrootSDK: StreamrootSDK?
     internal let manifestUrl = "https://wowza-cloudfront.streamroot.io/liveorigin/stream4/playlist.m3u8"
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        self.streamrootSDK = StreamrootSDK(streamrootKey: "dev", manifestURL: self.manifestUrl)
+        self.streamrootSDK = StreamrootSDK(streamrootKey: <#streamrootKey#>, manifestURL: self.manifestUrl)
         self.streamrootSDK?.delegate = self
 
         do {
@@ -56,5 +55,6 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
             NSValue(timeRange: TimeRange(range: value.timeRangeValue))
         }
     }
-
+    
+    func updatePeakBitRate(_ bitRate: Double) {}
 }

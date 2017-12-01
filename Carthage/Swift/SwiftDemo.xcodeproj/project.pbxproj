@@ -12,9 +12,9 @@
 		50F1DEB41E687C0E00B59D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB21E687C0E00B59D4B /* Main.storyboard */; };
 		50F1DEB61E687C0E00B59D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB51E687C0E00B59D4B /* Assets.xcassets */; };
 		50F1DEB91E687C0E00B59D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB71E687C0E00B59D4B /* LaunchScreen.storyboard */; };
-		50F1DECA1E68807900B59D4B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC81E68807900B59D4B /* Alamofire.framework */; };
-		50F1DECB1E68807900B59D4B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC91E68807900B59D4B /* Starscream.framework */; };
-		50F1DED21E6881EE00B59D4B /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DED11E6881EE00B59D4B /* StreamrootSDK.framework */; };
+		D6C2D4611FD16B8D00C5FEC1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC81E68807900B59D4B /* Alamofire.framework */; };
+		D6C2D4621FD16B8D00C5FEC1 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC91E68807900B59D4B /* Starscream.framework */; };
+		D6C2D4641FD16B8D00C5FEC1 /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		50F1DEBA1E687C0E00B59D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F1DEC81E68807900B59D4B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		50F1DEC91E68807900B59D4B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
-		50F1DED11E6881EE00B59D4B /* StreamrootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StreamrootSDK.framework; sourceTree = "<group>"; };
+		D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StreamrootSDK.framework; path = Carthage/Build/iOS/StreamrootSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,9 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F1DECB1E68807900B59D4B /* Starscream.framework in Frameworks */,
-				50F1DECA1E68807900B59D4B /* Alamofire.framework in Frameworks */,
-				50F1DED21E6881EE00B59D4B /* StreamrootSDK.framework in Frameworks */,
+				D6C2D4641FD16B8D00C5FEC1 /* StreamrootSDK.framework in Frameworks */,
+				D6C2D4611FD16B8D00C5FEC1 /* Alamofire.framework in Frameworks */,
+				D6C2D4621FD16B8D00C5FEC1 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +51,7 @@
 				50F1DEAC1E687C0E00B59D4B /* Products */,
 				50F1DEC81E68807900B59D4B /* Alamofire.framework */,
 				50F1DEC91E68807900B59D4B /* Starscream.framework */,
-				50F1DED11E6881EE00B59D4B /* StreamrootSDK.framework */,
+				D6C2D4601FD16B8D00C5FEC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +76,14 @@
 			path = SwiftDemo;
 			sourceTree = "<group>";
 		};
+		D6C2D4601FD16B8D00C5FEC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,7 +95,6 @@
 				50F1DEA81E687C0E00B59D4B /* Frameworks */,
 				50F1DEA91E687C0E00B59D4B /* Resources */,
 				50F1DECC1E6880FF00B59D4B /* Carthage */,
-				50F1DEC41E687E1D00B59D4B /* Copy StreamrootSDK */,
 			);
 			buildRules = (
 			);
@@ -146,20 +153,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50F1DEC41E687E1D00B59D4B /* Copy StreamrootSDK */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy StreamrootSDK";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = $SRCROOT/copy_streamroot_sdk;
-		};
 		50F1DECC1E6880FF00B59D4B /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +161,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/StreamrootSDK.framework",
 			);
 			name = Carthage;
 			outputPaths = (

@@ -6,7 +6,6 @@ target 'SwiftDemo' do
   use_frameworks!
 
   # Pods for CocoaPodsExample
-  pod 'Alamofire', '~> 4.2.0'
-  pod 'Starscream', '~> 2.0.0'
+  pod 'StreamrootDNA-iOS'
 
 end
