@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		508574F01E69857A00CBF275 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508574EE1E69857A00CBF275 /* Alamofire.framework */; };
-		508574F11E69857A00CBF275 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508574EF1E69857A00CBF275 /* Starscream.framework */; };
 		50CBA7EC1E697C35000D09AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CBA7EB1E697C35000D09AC /* main.m */; };
 		50CBA7EF1E697C35000D09AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CBA7EE1E697C35000D09AC /* AppDelegate.m */; };
 		50CBA7F21E697C35000D09AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CBA7F11E697C35000D09AC /* ViewController.m */; };
 		50CBA7F51E697C35000D09AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CBA7F31E697C35000D09AC /* Main.storyboard */; };
 		50CBA7F71E697C36000D09AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CBA7F61E697C36000D09AC /* Assets.xcassets */; };
 		50CBA7FA1E697C36000D09AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CBA7F81E697C36000D09AC /* LaunchScreen.storyboard */; };
-		D6645D3E1FD188FB003C20BA /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6645D3D1FD188FB003C20BA /* StreamrootSDK.framework */; };
+		D626F3051FD5BD730093D055 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508574EE1E69857A00CBF275 /* Alamofire.framework */; };
+		D626F3061FD5BD730093D055 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508574EF1E69857A00CBF275 /* Starscream.framework */; };
+		D626F3071FD5BD730093D055 /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6645D3D1FD188FB003C20BA /* StreamrootSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6645D3E1FD188FB003C20BA /* StreamrootSDK.framework in Frameworks */,
-				508574F11E69857A00CBF275 /* Starscream.framework in Frameworks */,
-				508574F01E69857A00CBF275 /* Alamofire.framework in Frameworks */,
+				D626F3051FD5BD730093D055 /* Alamofire.framework in Frameworks */,
+				D626F3061FD5BD730093D055 /* Starscream.framework in Frameworks */,
+				D626F3071FD5BD730093D055 /* StreamrootSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

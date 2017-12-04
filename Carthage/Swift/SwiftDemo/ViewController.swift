@@ -55,6 +55,7 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
             NSValue(timeRange: TimeRange(range: value.timeRangeValue))
         }
     }
-    
+
     func updatePeakBitRate(_ bitRate: Double) {}
 }
+

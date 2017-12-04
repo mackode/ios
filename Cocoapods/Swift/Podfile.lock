@@ -2,8 +2,8 @@ PODS:
   - Alamofire (4.5.1)
   - Starscream (3.0.2)
   - StreamrootDNA-iOS (2.0.0):
-    - Alamofire
-    - Starscream
+    - Alamofire (= 4.5.1)
+    - Starscream (= 3.0.2)
 
 DEPENDENCIES:
   - StreamrootDNA-iOS
@@ -11,7 +11,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
-  StreamrootDNA-iOS: dc8825839bc5e4bd5d945737ae222beb2c4b28c8
+  StreamrootDNA-iOS: 9b3cd87684738f65b3c25ff245f0f6fba79a36ef
 
 PODFILE CHECKSUM: 5f4126fe7a53fcdb22c4bc6199a620d11a06b5c1
 

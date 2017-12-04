@@ -17,7 +17,7 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        self.streamrootSDK = StreamrootSDK(streamrootKey: <#streamrootKey#>, manifestURL: self.manifestUrl)
+        self.streamrootSDK = StreamrootSDK(streamrootKey: <#StreamrootKey#>, manifestURL: self.manifestUrl)
         self.streamrootSDK?.delegate = self
 
         do {
@@ -55,6 +55,7 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
             NSValue(timeRange: TimeRange(range: value.timeRangeValue))
         }
     }
-    
+
     func updatePeakBitRate(_ bitRate: Double) {}
 }
+

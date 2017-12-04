@@ -12,9 +12,9 @@
 		50F1DEB41E687C0E00B59D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB21E687C0E00B59D4B /* Main.storyboard */; };
 		50F1DEB61E687C0E00B59D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB51E687C0E00B59D4B /* Assets.xcassets */; };
 		50F1DEB91E687C0E00B59D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB71E687C0E00B59D4B /* LaunchScreen.storyboard */; };
-		D6C2D4611FD16B8D00C5FEC1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC81E68807900B59D4B /* Alamofire.framework */; };
-		D6C2D4621FD16B8D00C5FEC1 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC91E68807900B59D4B /* Starscream.framework */; };
-		D6C2D4641FD16B8D00C5FEC1 /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */; };
+		D626F3021FD5BC5B0093D055 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC81E68807900B59D4B /* Alamofire.framework */; };
+		D626F3031FD5BC5B0093D055 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC91E68807900B59D4B /* Starscream.framework */; };
+		D626F3041FD5BC5B0093D055 /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C2D4641FD16B8D00C5FEC1 /* StreamrootSDK.framework in Frameworks */,
-				D6C2D4611FD16B8D00C5FEC1 /* Alamofire.framework in Frameworks */,
-				D6C2D4621FD16B8D00C5FEC1 /* Starscream.framework in Frameworks */,
+				D626F3021FD5BC5B0093D055 /* Alamofire.framework in Frameworks */,
+				D626F3031FD5BC5B0093D055 /* Starscream.framework in Frameworks */,
+				D626F3041FD5BC5B0093D055 /* StreamrootSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +117,7 @@
 				TargetAttributes = {
 					50F1DEAA1E687C0E00B59D4B = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -312,7 +313,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.streamroot.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -331,7 +333,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.streamroot.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

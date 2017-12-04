@@ -24,8 +24,7 @@
     [super viewDidLoad];
 
     NSString *manifestUrl = @"https://wowza-cloudfront.streamroot.io/liveorigin/stream4/playlist.m3u8";
-    self.streamrootSDK = [[StreamrootSDK alloc] initWithStreamrootKey:<#streamrootKey#>
-                                                          manifestURL:manifestUrl];
+    self.streamrootSDK = [[StreamrootSDK alloc] initWithStreamrootKey:<#StreamrootKey#> manifestURL:manifestUrl];
 
     self.streamrootSDK.delegate = self;
 
