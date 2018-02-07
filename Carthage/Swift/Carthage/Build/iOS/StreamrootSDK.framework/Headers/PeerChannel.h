@@ -21,7 +21,9 @@
 @property (nonatomic, weak, nullable) id<PeerChannelDelegate> delegate;
 @property (nonatomic, strong, readonly, nonnull) NSString *connectionId;
 
-- (instancetype _Nonnull)initWithChannel:(RTCDataChannel * _Nonnull)channel connectionId:(NSString * _Nonnull)connectionId;
+- (instancetype _Nonnull)initWithChannel:(RTCDataChannel * _Nonnull)channel
+                            connectionId:(NSString * _Nonnull)connectionId
+                            remotePeerId:(NSString*_Nonnull)remotePeerId;
 - (void)sendMessage:(NSString * _Nonnull)message;
 - (void)sendData:(NSData * _Nonnull)data;
 - (void)close;

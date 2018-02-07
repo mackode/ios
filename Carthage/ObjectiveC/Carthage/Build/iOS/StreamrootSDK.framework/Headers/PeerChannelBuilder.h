@@ -23,9 +23,7 @@
                                    isInitator:(BOOL)isInitator;
 
 - (void)offer;
-- (void)answerFromSdp:(NSString * _Nonnull)sdp;
+- (void)answerFromOfferedSdp:(NSString * _Nonnull)sdp;
 - (void)answerDeclined;
-- (void)receivedAcceptedAnswer:(NSString * _Nonnull)sdp;
-- (void)receivedIceCandidates:(NSArray<SRRTCICECandidate *> * _Nonnull)iceCandidates;
-
+- (void)receivedAcceptedAnswerSdp:(NSString * _Nonnull)sdp;
 @end

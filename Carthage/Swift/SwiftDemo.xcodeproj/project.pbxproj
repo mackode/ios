@@ -12,6 +12,7 @@
 		50F1DEB41E687C0E00B59D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB21E687C0E00B59D4B /* Main.storyboard */; };
 		50F1DEB61E687C0E00B59D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB51E687C0E00B59D4B /* Assets.xcassets */; };
 		50F1DEB91E687C0E00B59D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F1DEB71E687C0E00B59D4B /* LaunchScreen.storyboard */; };
+		D6252CCA202B6C8F0026AD9A /* Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6252CC9202B6C8F0026AD9A /* Sentry.framework */; };
 		D626F3021FD5BC5B0093D055 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC81E68807900B59D4B /* Alamofire.framework */; };
 		D626F3031FD5BC5B0093D055 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F1DEC91E68807900B59D4B /* Starscream.framework */; };
 		D626F3041FD5BC5B0093D055 /* StreamrootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */; };
@@ -27,6 +28,7 @@
 		50F1DEBA1E687C0E00B59D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F1DEC81E68807900B59D4B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		50F1DEC91E68807900B59D4B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		D6252CC9202B6C8F0026AD9A /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = Carthage/Build/iOS/Sentry.framework; sourceTree = "<group>"; };
 		D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StreamrootSDK.framework; path = Carthage/Build/iOS/StreamrootSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6252CCA202B6C8F0026AD9A /* Sentry.framework in Frameworks */,
 				D626F3021FD5BC5B0093D055 /* Alamofire.framework in Frameworks */,
 				D626F3031FD5BC5B0093D055 /* Starscream.framework in Frameworks */,
 				D626F3041FD5BC5B0093D055 /* StreamrootSDK.framework in Frameworks */,
@@ -79,6 +82,7 @@
 		D6C2D4601FD16B8D00C5FEC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6252CC9202B6C8F0026AD9A /* Sentry.framework */,
 				D6C2D4631FD16B8D00C5FEC1 /* StreamrootSDK.framework */,
 			);
 			name = Frameworks;
@@ -163,6 +167,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/StreamrootSDK.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Sentry.framework",
 			);
 			name = Carthage;
 			outputPaths = (

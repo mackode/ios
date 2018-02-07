@@ -11,7 +11,7 @@
 @interface SRRTCSessionDescription : NSObject
 
 @property(nonatomic, copy, readonly, nonnull) NSString *sdp;
-@property(nonatomic, copy, readonly, nonnull) NSString *type;
+@property(nonatomic, readonly, nonnull) NSString *type;
 
 - (instancetype _Nullable)initWithType:(NSString * _Nonnull)type sdp:(NSString * _Nonnull)sdp;
 

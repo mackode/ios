@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "SRLoggerLevel.h"
 
-
 @interface SRLogger : NSObject
 
 @property (nonatomic) SRLoggerLevel level;
@@ -24,5 +23,8 @@
 
 - (void)errorWithScope:(NSString * _Nullable)scope format:(NSString * _Nonnull)format, ...;
 - (void)error:(NSString * _Nonnull)message scope:(NSString * _Nullable)scope;
+
+- (void)warningWithScope:(NSString * _Nullable)scope format:(NSString * _Nonnull)format, ...;
+- (void)warning:(NSString * _Nonnull)message scope:(NSString * _Nullable)scope;
 
 @end

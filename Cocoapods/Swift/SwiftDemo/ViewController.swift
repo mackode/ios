@@ -17,7 +17,7 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        self.streamrootSDK = StreamrootSDK(streamrootKey: <#StreamrootKey#>, manifestURL: self.manifestUrl)
+        self.streamrootSDK = StreamrootSDK(streamrootKey: <#streamrootKey#>, manifestURL: self.manifestUrl)
         self.streamrootSDK?.delegate = self
 
         do {
@@ -34,8 +34,15 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
             if let url = URL(string: localPath) {
                 self.player = AVPlayer(url: url)
                 self.player!.play()
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
+                streamrootSDK?.displayStats(on: contentOverlayView!)
             }
         }
+    }
+  
+    override func viewDidDisappear(_ animated: Bool) {
+      streamrootSDK?.stop()
     }
 
     func playbackTime() -> Double {

@@ -38,8 +38,14 @@
 
     NSURL *url = [[NSURL alloc] initWithString:[self.streamrootSDK manifestLocalURL]];
     self.player = [[AVPlayer alloc] initWithURL:url];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+    [self.streamrootSDK displayStatsOnView:self.contentOverlayView];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.streamrootSDK stop];
+}
 
 - (double)playbackTime {
     return CMTimeGetSeconds([self.player currentTime]);

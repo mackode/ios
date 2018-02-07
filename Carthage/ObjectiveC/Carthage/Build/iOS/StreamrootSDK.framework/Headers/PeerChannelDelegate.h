@@ -19,6 +19,7 @@
                             isBinary:(BOOL)binary
                         connectionId:(NSString * _Nonnull)connectionId;
 - (void)dataChannel:(PeerChannel * _Nonnull)channel
-       stateChanged:(DataChannelState)state;
+       stateChanged:(DataChannelState)state
+          forPeerId:(NSString* _Nonnull) peerId;
 
 @end

@@ -12,11 +12,11 @@
 		502B1D921E699F44009641AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502B1D901E699F44009641AF /* Main.storyboard */; };
 		502B1D941E699F44009641AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502B1D931E699F44009641AF /* Assets.xcassets */; };
 		502B1D971E699F44009641AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502B1D951E699F44009641AF /* LaunchScreen.storyboard */; };
-		73DA4E827A2CB14ABA498757 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488D85A2548590D2AE43244C /* Pods_SwiftDemo.framework */; };
+		61F87A5EE34A7C0763C75A0C /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0BE8FD4D35334E0F6078E /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		488D85A2548590D2AE43244C /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17FC182A08D7C8E17511CC25 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		50057B711E69A10A00BB092A /* StreamrootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StreamrootSDK.framework; sourceTree = "<group>"; };
 		502B1D891E699F43009641AF /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502B1D8C1E699F44009641AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,8 +25,8 @@
 		502B1D931E699F44009641AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502B1D961E699F44009641AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		502B1D981E699F44009641AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CE6E3D78AB81BC6133CEA68 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
-		71FA4CFDCA410E2CA8CD0048 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6CD0BE8FD4D35334E0F6078E /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93ECA54B2C5D86F1BB53459D /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DA4E827A2CB14ABA498757 /* Pods_SwiftDemo.framework in Frameworks */,
+				61F87A5EE34A7C0763C75A0C /* Pods_SwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				50057B711E69A10A00BB092A /* StreamrootSDK.framework */,
-				488D85A2548590D2AE43244C /* Pods_SwiftDemo.framework */,
+				6CD0BE8FD4D35334E0F6078E /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,7 +56,7 @@
 				502B1D8B1E699F43009641AF /* SwiftDemo */,
 				502B1D8A1E699F43009641AF /* Products */,
 				35DC41AE053F1A2E21AE7876 /* Frameworks */,
-				779A519D0839C343299EC92F /* Pods */,
+				D4C6860665C13CFE12387AFD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +81,11 @@
 			path = SwiftDemo;
 			sourceTree = "<group>";
 		};
-		779A519D0839C343299EC92F /* Pods */ = {
+		D4C6860665C13CFE12387AFD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				71FA4CFDCA410E2CA8CD0048 /* Pods-SwiftDemo.debug.xcconfig */,
-				5CE6E3D78AB81BC6133CEA68 /* Pods-SwiftDemo.release.xcconfig */,
+				17FC182A08D7C8E17511CC25 /* Pods-SwiftDemo.debug.xcconfig */,
+				93ECA54B2C5D86F1BB53459D /* Pods-SwiftDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -97,12 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 502B1D9B1E699F44009641AF /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
 			buildPhases = (
-				52A65449EC15F498643AF6B6 /* [CP] Check Pods Manifest.lock */,
+				689042E7D93777EBB5DC20E9 /* [CP] Check Pods Manifest.lock */,
 				502B1D851E699F43009641AF /* Sources */,
 				502B1D861E699F43009641AF /* Frameworks */,
 				502B1D871E699F43009641AF /* Resources */,
-				5525229CDBFBBCCEF56123D2 /* [CP] Embed Pods Frameworks */,
-				106EDC5DC8E6D9FD578F79FD /* [CP] Copy Pods Resources */,
+				124C28BFE0B4DA5DB45C4811 /* [CP] Embed Pods Frameworks */,
+				D444BDC9F24C351B10CB7A5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,22 +162,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		106EDC5DC8E6D9FD578F79FD /* [CP] Copy Pods Resources */ = {
+		124C28BFE0B4DA5DB45C4811 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${PODS_ROOT}/StreamrootSDK/Carthage/Build/iOS/StreamrootSDK.framework",
+				"${PODS_ROOT}/StreamrootSDK/Carthage/Build/iOS/StreamrootSDK.framework.dSYM",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSCrash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamrootSDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/StreamrootSDK.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52A65449EC15F498643AF6B6 /* [CP] Check Pods Manifest.lock */ = {
+		689042E7D93777EBB5DC20E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,28 +208,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5525229CDBFBBCCEF56123D2 /* [CP] Embed Pods Frameworks */ = {
+		D444BDC9F24C351B10CB7A5C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
-				"${PODS_ROOT}/StreamrootDNA-iOS/StreamrootSDK.framework",
-				"${PODS_ROOT}/StreamrootDNA-iOS/StreamrootSDK.framework.dSYM",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamrootSDK.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/StreamrootSDK.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -360,7 +364,7 @@
 		};
 		502B1D9C1E699F44009641AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71FA4CFDCA410E2CA8CD0048 /* Pods-SwiftDemo.debug.xcconfig */;
+			baseConfigurationReference = 17FC182A08D7C8E17511CC25 /* Pods-SwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -383,7 +387,7 @@
 		};
 		502B1D9D1E699F44009641AF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CE6E3D78AB81BC6133CEA68 /* Pods-SwiftDemo.release.xcconfig */;
+			baseConfigurationReference = 93ECA54B2C5D86F1BB53459D /* Pods-SwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

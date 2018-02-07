@@ -1,13 +1,4 @@
-# Streamroot iOS SDK integration reference
-
-The purpose of this reference application is to provide a fully integrated example application, using the StreamrootSDK and [`AVPlayer`](https://developer.apple.com/reference/avfoundation/avplayer) as described [here](https://streamroot.readme.io/docs/ios-sdk).
-
-It contains 4 projects:
-
-- Swift with Carthage
-- ObjectiveC with Carthage
-- Swift with Cocoapods
-- ObjectiveC with Cocoapods
+# Streamroot iOS SDK
 
 ## Requirements
 
@@ -25,6 +16,7 @@ It contains 4 projects:
 
 - [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) v4.5.1 
 - [daltoniam/Starscream](https://github.com/daltoniam/Starscream) v3.0.2
+- [getsentry/sentry-cocoa](https://github.com/getsentry/sentry-cocoa) v3.11.1
 
 Install dependencies:
 
@@ -54,10 +46,13 @@ $ brew install carthage
 To integrate StreamrootSDK into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "streamroot/StreamrootDNA-iOS" ~> 2.0.0
+binary "https://sdk.streamroot.io/ios/StreamrootSDK.json" ~> 2.1.0
+github "Alamofire/Alamofire" == 4.6.0
+github "daltoniam/Starscream" == 3.0.2
+github "getsentry/sentry-cocoa" == 3.11.1
 ```
 
-Run `carthage update` to build the framework and drag the built `StreamrootSDK.framework`, `Alamofire.framework` and  `Starscream.framework` into your Xcode project as linked libraries.
+Run `carthage update` to build the framework and drag the built `StreamrootSDK.framework`, `Alamofire.framework`, `Starscream.framework` and `Sentry.framework` into your Xcode project as linked libraries.
 
 ### CocoaPods
 
@@ -77,7 +72,7 @@ platform :ios, '9..0'
 use_frameworks!
 
 target '<Your Target Name>' do
-	pod 'StreamrootDNA-iOS', '~> 2.0.0'
+	pod 'StreamrootSDK', '~> 2.0.0'
 end
 ```
 

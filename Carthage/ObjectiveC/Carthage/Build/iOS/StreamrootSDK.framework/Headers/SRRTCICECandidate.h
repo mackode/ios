@@ -8,17 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class RTCICECandidate;
-
+@class RTCIceCandidate;
 
 @interface SRRTCICECandidate : NSObject
 
 @property (nonatomic, copy, readonly) NSString *sdpMid;
-@property (nonatomic, readonly) NSInteger sdpMLineIndex;
+@property (nonatomic, readonly) int sdpMLineIndex;
 @property (nonatomic, copy, readonly) NSString *sdp;
 
-- (id)initWithMid:(NSString *)sdpMid index:(NSInteger)sdpMLineIndex sdp:(NSString *)sdp;
+- (id)initWithMid:(NSString *)sdpMid index:(int)sdpMLineIndex sdp:(NSString *)sdp;
 - (NSDictionary *)JSON;
-- (RTCICECandidate *)RTCICECandidate;
+- (RTCIceCandidate *)RTCICECandidate;
 
 @end

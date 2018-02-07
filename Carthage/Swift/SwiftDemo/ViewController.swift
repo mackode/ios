@@ -34,10 +34,17 @@ class ViewController: AVPlayerViewController, StreamrootSDKDelegate {
             if let url = URL(string: localPath) {
                 self.player = AVPlayer(url: url)
                 self.player!.play()
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
+                streamrootSDK?.displayStats(on: contentOverlayView!)
             }
         }
     }
-
+  
+    override func viewDidDisappear(_ animated: Bool) {
+     streamrootSDK?.stop()
+    }
+  
     func playbackTime() -> Double {
         if let player = self.player {
             return CMTimeGetSeconds(player.currentTime())

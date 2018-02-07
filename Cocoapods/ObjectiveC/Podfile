@@ -6,7 +6,7 @@ target 'ObjectiveCDemo' do
   use_frameworks!
 
   # Pods for CocoaPodsExample
-  pod 'StreamrootDNA-iOS'
+  pod 'StreamrootSDK'
 
 end
 
