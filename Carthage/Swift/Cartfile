@@ -1,4 +1,0 @@
-binary "https://sdk.streamroot.io/ios/StreamrootSDK.json" ~> 2.2.0
-github "Alamofire/Alamofire" == 4.6.0
-github "daltoniam/Starscream" == 3.0.2
-github "getsentry/sentry-cocoa" == 3.11.1

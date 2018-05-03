@@ -1,6 +1,0 @@
-binary "https://sdk.streamroot.io/ios/StreamrootSDK.json" "2.2"
-github "Alamofire/Alamofire" "4.6.0"
-github "daltoniam/Starscream" "3.0.2"
-github "daltoniam/common-crypto-spm" "1.1.0"
-github "daltoniam/zlib-spm" "1.1.0"
-github "getsentry/sentry-cocoa" "3.11.1"
