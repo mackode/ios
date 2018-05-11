@@ -50,7 +50,6 @@
 		D61171EA209B3FAB00CBE36B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D61171EF209B3FAB00CBE36B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D61171F1209B3FAD00CBE36B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D61171F3209B3FAD00CBE36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61171FB209B413C00CBE36B /* StreamrootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StreamrootSDK.framework; path = DnaSample/Carthage/Build/tvOS/StreamrootSDK.framework; sourceTree = "<group>"; };
 		D61171FC209B413C00CBE36B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = DnaSample/Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		D61171FD209B413C00CBE36B /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = DnaSample/Carthage/Build/tvOS/Sentry.framework; sourceTree = "<group>"; };
@@ -141,7 +140,6 @@
 				D61171EA209B3FAB00CBE36B /* AppDelegate.swift */,
 				D61171EE209B3FAB00CBE36B /* Main.storyboard */,
 				D61171F1209B3FAD00CBE36B /* Assets.xcassets */,
-				D61171F3209B3FAD00CBE36B /* Info.plist */,
 			);
 			path = "DnaSample-tvOS";
 			sourceTree = "<group>";
@@ -536,7 +534,7 @@
 					"$(PROJECT_DIR)/DnaSample/Carthage/Build/tvOS",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "DnaSample-tvOS/Info.plist";
+				INFOPLIST_FILE = DnaSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.streamroot.DnaSample-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,7 +560,7 @@
 					"$(PROJECT_DIR)/DnaSample/Carthage/Build/tvOS",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "DnaSample-tvOS/Info.plist";
+				INFOPLIST_FILE = DnaSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.streamroot.DnaSample-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
