@@ -13,10 +13,12 @@ import AVKit
 class SwiftSampleViewController: AVPlayerViewController {
     
     var dnaClient: DNAClient?
-    private let manifestUrl = URL(string: "https://demo-live.streamroot.io/index.m3u8")!
+    //private let manifestUrl = URL(string: "https://demo-live.streamroot.io/index.m3u8")!
+    private let manifestUrl = URL(string: "http://usp-demo.cf.castlabs.com/video/piff/31245689abb7c52a3d0721447bddd6cd_Tears_Of_Steel.ism/31245689abb7c52a3d0721447bddd6cd_Tears_Of_Steel.m3u8")!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
         do {
             self.dnaClient = try DNAClient.builder()
                 .dnaClientDelegate(self)
@@ -30,7 +32,13 @@ class SwiftSampleViewController: AVPlayerViewController {
     override func viewDidDisappear(_ animated: Bool) {
         dnaClient?.stop()
     }
-    
+
+    @objc func playerItemDidReachEnd(notification: Notification) {
+        if let playerItem: AVPlayerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: kCMTimeZero, completionHandler: nil)
+        }
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         do {
@@ -46,6 +54,9 @@ class SwiftSampleViewController: AVPlayerViewController {
             if let url = URL(string: localPath) {
                 self.player = AVPlayer(url: url)
                 self.player!.play()
+
+                NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(notification:)), name: Notification.Name.AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
+
                 self.view.setNeedsLayout()
                 self.view.layoutIfNeeded()
                 dnaClient?.displayStats(onView: contentOverlayView!)

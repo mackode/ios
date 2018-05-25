@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *manifestUrl = [NSURL URLWithString: @"https://demo-live.streamroot.io/index.m3u8"];
+    //NSURL *manifestUrl = [NSURL URLWithString: @"https://demo-live.streamroot.io/index.m3u8"];
+    NSURL *manifestUrl = [NSURL URLWithString: @"http://usp-demo.cf.castlabs.com/video/piff/31245689abb7c52a3d0721447bddd6cd_Tears_Of_Steel.ism/31245689abb7c52a3d0721447bddd6cd_Tears_Of_Steel.m3u8"];
     NSError *error;
     self.dnaClient = [[[DNAClient.builder dnaClientDelegate: self] latency: 30] start:manifestUrl error: &error];
     if (error || !self.dnaClient) {
@@ -32,9 +33,18 @@
     NSURL *url = [[NSURL alloc] initWithString: self.dnaClient.manifestLocalURLPath];
     self.player = [[AVPlayer alloc] initWithURL:url];
     [self.player play];
+    self.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:[self.player currentItem]];
+
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
     [self.dnaClient displayStatsOnView: self.contentOverlayView];
+}
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    AVPlayerItem *playerItem = [notification object];
+    [playerItem seekToTime:kCMTimeZero];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
